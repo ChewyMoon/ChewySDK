@@ -1501,7 +1501,7 @@ namespace MoonDraven
             /// <summary>
             /// Gets or sets the scale.
             /// </summary>
-            public Vector2 Scale { get; set; } = new Vector2(1, 1);
+            public Vector2 Scale { get; set; }
 
             /// <summary>
             /// Gets or sets the rotation.
@@ -1511,7 +1511,7 @@ namespace MoonDraven
             /// <summary>
             /// Gets or sets the color.
             /// </summary>
-            public ColorBGRA Color { get; set; } = SharpDX.Color.White;
+            public ColorBGRA Color { get; set; }
 
             /// <summary>
             /// The game_ on update.
