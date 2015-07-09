@@ -22,6 +22,7 @@ namespace MoonDraven
     using System;
 
     using LeagueSharp;
+    using LeagueSharp.SDK.Core;
     using LeagueSharp.SDK.Core.Events;
 
     /// <summary>
@@ -37,6 +38,8 @@ namespace MoonDraven
         /// </param>
         public static void Main(string[] args)
         {
+            // Bootstrap the SDK. (Update sandbox pls)
+            Bootstrap.Init(null);
             Load.OnLoad += GameOnOnGameLoad;
         }
 
