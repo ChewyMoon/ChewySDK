@@ -156,11 +156,11 @@ namespace MoonDraven
             Game.PrintChat("<font color=\"#7CFC00\"><b>MoonDraven:</b></font> Loaded");
 
             GameObject.OnCreate += this.GameObjectOnOnCreate;
-            GameObject.OnDelete += this.GameObjectOnOnDelete;
-            Gapcloser.OnGapCloser += this.AntiGapcloserOnOnEnemyGapcloser;
+            GameObject.OnDelete += this.GameObjectOnOnDelete;           
             InterruptableSpell.OnInterruptableTarget += this.Interrupter2OnOnInterruptableTarget;
             Drawing.OnDraw += this.DrawingOnOnDraw;
             Game.OnUpdate += this.GameOnOnUpdate;
+            Gapcloser.OnGapCloser += this.AntiGapcloserOnOnEnemyGapcloser;
         }
 
         /// <summary>
@@ -297,6 +297,8 @@ namespace MoonDraven
                 return;
             }
 
+            Console.WriteLine("Axe created");
+
             this.QReticles.Add(new QRecticle(sender, Environment.TickCount + 0x708));
             DelayAction.Add(0x708, () => this.QReticles.RemoveAll(x => x.Object.NetworkId == sender.NetworkId));
         }
@@ -312,8 +314,9 @@ namespace MoonDraven
             var catchOptionObject = this.Menu["AxeSettings"]["AxeMode"].GetValue<MenuList<string>>();
             var catchOption = catchOptionObject.Index;
 
-            if ((catchOption == 0 && Orbwalker.ActiveMode == OrbwalkerMode.Orbwalk)
-                || (catchOption == 1 && Orbwalker.ActiveMode != OrbwalkerMode.None) || catchOption == 2)
+
+            if ((catchOption == 1 && Orbwalker.ActiveMode == OrbwalkerMode.Orbwalk)
+                || (catchOption == 2 && Orbwalker.ActiveMode != OrbwalkerMode.None) || catchOption == 0)
             {
                 var bestReticle =
                     this.QReticles.Where(
@@ -324,7 +327,7 @@ namespace MoonDraven
                         .ThenBy(x => x.Position.Distance(Game.CursorPos))
                         .FirstOrDefault();
 
-                if (bestReticle != null && bestReticle.Object.Position.Distance(this.Player.ServerPosition) > 0x6E)
+                if (bestReticle != null && bestReticle.Object.Position.Distance(this.Player.ServerPosition) > 110)
                 {
                     var eta = 1000 * (this.Player.Distance(bestReticle.Position) / this.Player.MoveSpeed);
                     var expireTime = bestReticle.ExpireTime - Environment.TickCount;
@@ -402,7 +405,7 @@ namespace MoonDraven
                     break;
             }
 
-            if (this.Menu["Harass"]["UseHarassToggle"].GetValue<MenuBool>().Value)
+            if (this.Menu["Harass"]["UseHarassToggle"].GetValue<MenuKeyBind>().Active)
             {
                 this.Harass();
             }
@@ -573,7 +576,7 @@ namespace MoonDraven
 
             // Axe Menu
             var axeMenu = new Menu("AxeSettings", "Axe Settings");
-            axeMenu.Add(new MenuList<string>("AxeMode", "Catch Axe on Mode:", new[] { "Combo", "Any", "Always" }));
+            axeMenu.Add(new MenuList<string>("AxeMode", "Catch Axe on Mode:", new[] { "Always", "Combo", "Any" }));
             axeMenu.Add(new MenuSlider("CatchAxeRange", "Catch Axe Range", 0x320, 0x78, 0x5DC));
             axeMenu.Add(new MenuSlider("MaxAxes", "Maximum Axes", 2, 1, 3));
             axeMenu.Add(new MenuBool("UseWForQ", "Use W if Axe too far", true));
