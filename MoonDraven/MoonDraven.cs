@@ -206,7 +206,7 @@ namespace MoonDraven
                 }
             }
 
-            if (drawAxeRange)
+            if (drawAxeRange && !this.Menu["AxeSettings"]["AlwaysCatch"].GetValue<MenuBool>().Value)
             {
                 Render.Circle.DrawCircle(
                     Game.CursorPos,
@@ -314,7 +314,6 @@ namespace MoonDraven
             var catchOptionObject = this.Menu["AxeSettings"]["AxeMode"].GetValue<MenuList<string>>();
             var catchOption = catchOptionObject.Index;
 
-
             if ((catchOption == 1 && Orbwalker.ActiveMode == OrbwalkerMode.Orbwalk)
                 || (catchOption == 2 && Orbwalker.ActiveMode != OrbwalkerMode.None) || catchOption == 0)
             {
@@ -322,7 +321,7 @@ namespace MoonDraven
                     this.QReticles.Where(
                         x =>
                         x.Object.Position.Distance(Game.CursorPos)
-                        < this.Menu["AxeSettings"]["CatchAxeRange"].GetValue<MenuSlider>().Value)
+                        < (this.Menu["AxeSettings"]["AlwaysCatch"].GetValue<MenuBool>().Value ? float.MaxValue : this.Menu["AxeSettings"]["CatchAxeRange"].GetValue<MenuSlider>().Value))
                         .OrderBy(x => x.Position.Distance(this.Player.ServerPosition))
                         .ThenBy(x => x.Position.Distance(Game.CursorPos))
                         .FirstOrDefault();
@@ -581,6 +580,7 @@ namespace MoonDraven
             axeMenu.Add(new MenuSlider("MaxAxes", "Maximum Axes", 2, 1, 3));
             axeMenu.Add(new MenuBool("UseWForQ", "Use W if Axe too far", true));
             axeMenu.Add(new MenuBool("DontCatchUnderTurret", "Don't Catch Axe Under Turret", true));
+            axeMenu.Add(new MenuBool("AlwaysCatch", "Always Catch Axe", false));
             this.Menu.Add(axeMenu);
 
             // Drawing
