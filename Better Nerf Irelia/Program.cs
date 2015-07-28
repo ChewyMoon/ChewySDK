@@ -308,21 +308,22 @@ namespace Better_Nerf_Irelia
                 return;
             }
 
-            // if (useBotrk && Botrk.IsReady)
-            // {
-            // Botrk.Cast(target);
-            // }
+            if (useBotrk && Botrk.IsReady)
+            {
+                Botrk.Cast(target);
+            }
 
-            // if (useRanduin && Randuins.IsReady && Player.Distance(target) < 500
-            // && Player.Distance(target) > Player.GetRealAutoAttackRange())
-            // {
-            // Randuins.Cast();
-            // }
+            if (useRanduin && Randuins.IsReady && Player.Distance(target) < 500
+                && Player.Distance(target) > Player.GetRealAutoAttackRange())
+            {
+                Randuins.Cast();
+            }
 
-            // if (useHextech && Hextech.IsReady)
-            // {
-            // Hextech.Cast(target);
-            // }
+            if (useHextech && Hextech.IsReady)
+            {
+                Hextech.Cast(target);
+            }
+
             if (useQ && Q.IsReady())
             {
                 Q.CastOnUnit(target);
@@ -508,10 +509,10 @@ namespace Better_Nerf_Irelia
         }
 
         /// <summary>
-        ///     Called when the game is being drawn.
+        /// Called when the game is being drawn.
         /// </summary>
         /// <param name="args">
-        ///     The <see cref="EventArgs" /> instance containing the event data.
+        /// The <see cref="EventArgs"/> instance containing the event data.
         /// </param>
         private static void DrawingOnDraw(EventArgs args)
         {
@@ -559,10 +560,10 @@ namespace Better_Nerf_Irelia
         }
 
         /// <summary>
-        ///     Called when the game gets updated.
+        /// Called when the game gets updated.
         /// </summary>
         /// <param name="args">
-        ///     The <see cref="EventArgs" /> instance containing the event data.
+        /// The <see cref="EventArgs"/> instance containing the event data.
         /// </param>
         private static void Game_OnUpdate(EventArgs args)
         {
@@ -586,13 +587,13 @@ namespace Better_Nerf_Irelia
         }
 
         /// <summary>
-        ///     Called when there is an active gapcloser.
+        /// Called when there is an active gapcloser.
         /// </summary>
         /// <param name="sender">
-        ///     The sender.
+        /// The sender.
         /// </param>
         /// <param name="e">
-        ///     The <see cref="Gapcloser.GapCloserEventArgs" /> instance containing the event data.
+        /// The <see cref="Gapcloser.GapCloserEventArgs"/> instance containing the event data.
         /// </param>
         [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1650:ElementDocumentationMustBeSpelledCorrectly", 
             Justification = "Reviewed. Suppression is OK here.")]
@@ -610,13 +611,13 @@ namespace Better_Nerf_Irelia
         }
 
         /// <summary>
-        ///     Gets the combo damage.
+        /// Gets the combo damage.
         /// </summary>
         /// <param name="target">
-        ///     The target.
+        /// The target.
         /// </param>
         /// <returns>
-        ///     The <see cref="float" />.
+        /// The <see cref="float"/>.
         /// </returns>
         private static double GetComboDamage(Obj_AI_Hero target)
         {
@@ -651,13 +652,13 @@ namespace Better_Nerf_Irelia
         }
 
         /// <summary>
-        ///     Called when there is an interruptable target.
+        /// Called when there is an interruptable target.
         /// </summary>
         /// <param name="sender">
-        ///     The sender.
+        /// The sender.
         /// </param>
         /// <param name="e">
-        ///     The <see cref="InterruptableSpell.InterruptableTargetEventArgs" /> instance containing the event data.
+        /// The <see cref="InterruptableSpell.InterruptableTargetEventArgs"/> instance containing the event data.
         /// </param>
         [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1650:ElementDocumentationMustBeSpelledCorrectly", 
             Justification = "Reviewed. Suppression is OK here.")]
@@ -749,13 +750,13 @@ namespace Better_Nerf_Irelia
         }
 
         /// <summary>
-        ///     Called when the game loads.
+        /// Called when the game loads.
         /// </summary>
         /// <param name="sender">
-        ///     The sender.
+        /// The sender.
         /// </param>
         /// <param name="eventArgs">
-        ///     The <see cref="EventArgs" /> instance containing the event data.
+        /// The <see cref="EventArgs"/> instance containing the event data.
         /// </param>
         private static void LoadOnOnLoad(object sender, EventArgs eventArgs)
         {
@@ -775,9 +776,10 @@ namespace Better_Nerf_Irelia
             E.SetTargetted(0x3E800000, 0x14);
             R.SetSkillshot(0x3E800000, 0x41, 0x640, false, SkillshotType.SkillshotLine);
 
-            // Botrk = new Items.Item(ItemId.Blade_of_the_Ruined_King, 0x226);
-            // Randuins = new Items.Item(ItemId.Randuins_Omen, 0x1F4);
-            // Hextech = new Items.Item(ItemId.Hextech_Gunblade, 0x2BC);
+            Botrk = new Items.Item(ItemId.Blade_of_the_Ruined_King, 0x226);
+            Randuins = new Items.Item(ItemId.Randuins_Omen, 0x1F4);
+            Hextech = new Items.Item(ItemId.Hextech_Gunblade, 0x2BC);
+
             CreateMenu();
 
             Game.OnUpdate += Game_OnUpdate;
@@ -788,10 +790,10 @@ namespace Better_Nerf_Irelia
         }
 
         /// <summary>
-        ///     The main.
+        /// The main.
         /// </summary>
         /// <param name="args">
-        ///     The args.
+        /// The args.
         /// </param>
         private static void Main(string[] args)
         {
@@ -799,13 +801,13 @@ namespace Better_Nerf_Irelia
         }
 
         /// <summary>
-        ///     Called when the client processes a spell cast.
+        /// Called when the client processes a spell cast.
         /// </summary>
         /// <param name="sender">
-        ///     The sender.
+        /// The sender.
         /// </param>
         /// <param name="args">
-        ///     The <see cref="GameObjectProcessSpellCastEventArgs" /> instance containing the event data.
+        /// The <see cref="GameObjectProcessSpellCastEventArgs"/> instance containing the event data.
         /// </param>
         private static void ObjAiBaseOnProcessSpellCast(Obj_AI_Base sender, GameObjectProcessSpellCastEventArgs args)
         {
@@ -821,13 +823,13 @@ namespace Better_Nerf_Irelia
         }
 
         /// <summary>
-        ///     Uses the E spell.
+        /// Uses the E spell.
         /// </summary>
         /// <param name="target">
-        ///     The target.
+        /// The target.
         /// </param>
         /// <param name="onlyIfStunnable">
-        ///     if set to <c>true</c> will only cast E if the target is stunnable.
+        /// if set to <c>true</c> will only cast E if the target is stunnable.
         /// </param>
         [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1650:ElementDocumentationMustBeSpelledCorrectly", 
             Justification = "Reviewed. Suppression is OK here.")]

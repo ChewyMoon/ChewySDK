@@ -107,16 +107,16 @@ namespace Better_Nerf_Irelia
         #region Public Methods and Operators
 
         /// <summary>
-        ///     The add.
+        /// The add.
         /// </summary>
         /// <param name="renderObject">
-        ///     The render object.
+        /// The render object.
         /// </param>
         /// <param name="layer">
-        ///     The layer.
+        /// The layer.
         /// </param>
         /// <returns>
-        ///     The <see cref="RenderObject" />.
+        /// The <see cref="RenderObject"/>.
         /// </returns>
         public static RenderObject Add(this RenderObject renderObject, float layer = float.MaxValue)
         {
@@ -130,13 +130,13 @@ namespace Better_Nerf_Irelia
         }
 
         /// <summary>
-        ///     The on screen.
+        /// The on screen.
         /// </summary>
         /// <param name="point">
-        ///     The point.
+        /// The point.
         /// </param>
         /// <returns>
-        ///     The <see cref="bool" />.
+        /// The <see cref="bool"/>.
         /// </returns>
         public static bool OnScreen(Vector2 point)
         {
@@ -144,10 +144,10 @@ namespace Better_Nerf_Irelia
         }
 
         /// <summary>
-        ///     The remove.
+        /// The remove.
         /// </summary>
         /// <param name="renderObject">
-        ///     The render object.
+        /// The render object.
         /// </param>
         public static void Remove(this RenderObject renderObject)
         {
@@ -162,13 +162,13 @@ namespace Better_Nerf_Irelia
         #region Methods
 
         /// <summary>
-        ///     The current domain on domain unload.
+        /// The current domain on domain unload.
         /// </summary>
         /// <param name="sender">
-        ///     The sender.
+        /// The sender.
         /// </param>
         /// <param name="eventArgs">
-        ///     The event args.
+        /// The event args.
         /// </param>
         private static void CurrentDomainOnDomainUnload(object sender, EventArgs eventArgs)
         {
@@ -180,10 +180,10 @@ namespace Better_Nerf_Irelia
         }
 
         /// <summary>
-        ///     The drawing_ on draw.
+        /// The drawing_ on draw.
         /// </summary>
         /// <param name="args">
-        ///     The args.
+        /// The args.
         /// </param>
         private static void Drawing_OnDraw(EventArgs args)
         {
@@ -199,10 +199,10 @@ namespace Better_Nerf_Irelia
         }
 
         /// <summary>
-        ///     The drawing_ on end scene.
+        /// The drawing_ on end scene.
         /// </summary>
         /// <param name="args">
-        ///     The args.
+        /// The args.
         /// </param>
         private static void Drawing_OnEndScene(EventArgs args)
         {
@@ -220,10 +220,10 @@ namespace Better_Nerf_Irelia
         }
 
         /// <summary>
-        ///     The drawing on on post reset.
+        /// The drawing on on post reset.
         /// </summary>
         /// <param name="args">
-        ///     The args.
+        /// The args.
         /// </param>
         private static void DrawingOnOnPostReset(EventArgs args)
         {
@@ -234,10 +234,10 @@ namespace Better_Nerf_Irelia
         }
 
         /// <summary>
-        ///     The drawing on on pre reset.
+        /// The drawing on on pre reset.
         /// </summary>
         /// <param name="args">
-        ///     The args.
+        /// The args.
         /// </param>
         private static void DrawingOnOnPreReset(EventArgs args)
         {
@@ -321,22 +321,22 @@ namespace Better_Nerf_Irelia
             #region Constructors and Destructors
 
             /// <summary>
-            ///     Initializes a new instance of the <see cref="Circle" /> class.
+            /// Initializes a new instance of the <see cref="Circle"/> class.
             /// </summary>
             /// <param name="unit">
-            ///     The unit.
+            /// The unit.
             /// </param>
             /// <param name="radius">
-            ///     The radius.
+            /// The radius.
             /// </param>
             /// <param name="color">
-            ///     The color.
+            /// The color.
             /// </param>
             /// <param name="width">
-            ///     The width.
+            /// The width.
             /// </param>
             /// <param name="zDeep">
-            ///     The z deep.
+            /// The z deep.
             /// </param>
             public Circle(GameObject unit, float radius, Color color, int width = 1, bool zDeep = false)
             {
@@ -348,25 +348,25 @@ namespace Better_Nerf_Irelia
             }
 
             /// <summary>
-            ///     Initializes a new instance of the <see cref="Circle" /> class.
+            /// Initializes a new instance of the <see cref="Circle"/> class.
             /// </summary>
             /// <param name="unit">
-            ///     The unit.
+            /// The unit.
             /// </param>
             /// <param name="offset">
-            ///     The offset.
+            /// The offset.
             /// </param>
             /// <param name="radius">
-            ///     The radius.
+            /// The radius.
             /// </param>
             /// <param name="color">
-            ///     The color.
+            /// The color.
             /// </param>
             /// <param name="width">
-            ///     The width.
+            /// The width.
             /// </param>
             /// <param name="zDeep">
-            ///     The z deep.
+            /// The z deep.
             /// </param>
             public Circle(GameObject unit, Vector3 offset, float radius, Color color, int width = 1, bool zDeep = false)
             {
@@ -379,25 +379,25 @@ namespace Better_Nerf_Irelia
             }
 
             /// <summary>
-            ///     Initializes a new instance of the <see cref="Circle" /> class.
+            /// Initializes a new instance of the <see cref="Circle"/> class.
             /// </summary>
             /// <param name="position">
-            ///     The position.
+            /// The position.
             /// </param>
             /// <param name="offset">
-            ///     The offset.
+            /// The offset.
             /// </param>
             /// <param name="radius">
-            ///     The radius.
+            /// The radius.
             /// </param>
             /// <param name="color">
-            ///     The color.
+            /// The color.
             /// </param>
             /// <param name="width">
-            ///     The width.
+            /// The width.
             /// </param>
             /// <param name="zDeep">
-            ///     The z deep.
+            /// The z deep.
             /// </param>
             public Circle(
                 Vector3 position, 
@@ -416,22 +416,22 @@ namespace Better_Nerf_Irelia
             }
 
             /// <summary>
-            ///     Initializes a new instance of the <see cref="Circle" /> class.
+            /// Initializes a new instance of the <see cref="Circle"/> class.
             /// </summary>
             /// <param name="position">
-            ///     The position.
+            /// The position.
             /// </param>
             /// <param name="radius">
-            ///     The radius.
+            /// The radius.
             /// </param>
             /// <param name="color">
-            ///     The color.
+            /// The color.
             /// </param>
             /// <param name="width">
-            ///     The width.
+            /// The width.
             /// </param>
             /// <param name="zDeep">
-            ///     The z deep.
+            /// The z deep.
             /// </param>
             public Circle(Vector3 position, float radius, Color color, int width = 1, bool zDeep = false)
             {
@@ -510,18 +510,16 @@ namespace Better_Nerf_Irelia
                     Pool.Managed);
 
                 vertices.Lock(0, 0, LockFlags.None).WriteRange(
-                   new[]
-                    {
-                        // T1
-                        new Vector4(-X, 0f, -X, 1.0f), new Vector4(),
-                        new Vector4(-X, 0f, X, 1.0f), new Vector4(),
-                        new Vector4(X, 0f, -X, 1.0f), new Vector4(),
+                    new[]
+                        {
+                            // T1
+                            new Vector4(-X, 0f, -X, 1.0f), new Vector4(), new Vector4(-X, 0f, X, 1.0f), new Vector4(), 
+                            new Vector4(X, 0f, -X, 1.0f), new Vector4(), 
 
-                        // T2
-                        new Vector4(-X, 0f, X, 1.0f), new Vector4(),
-                        new Vector4(X, 0f, X, 1.0f), new Vector4(),
-                        new Vector4(X, 0f, -X, 1.0f), new Vector4()
-                    });
+                            // T2
+                            new Vector4(-X, 0f, X, 1.0f), new Vector4(), new Vector4(X, 0f, X, 1.0f), new Vector4(), 
+                            new Vector4(X, 0f, -X, 1.0f), new Vector4()
+                        });
                 vertices.Unlock();
 
                 vertexElements = new[]
@@ -776,22 +774,22 @@ namespace Better_Nerf_Irelia
             }
 
             /// <summary>
-            ///     The draw circle.
+            /// The draw circle.
             /// </summary>
             /// <param name="position">
-            ///     The position.
+            /// The position.
             /// </param>
             /// <param name="radius">
-            ///     The radius.
+            /// The radius.
             /// </param>
             /// <param name="color">
-            ///     The color.
+            /// The color.
             /// </param>
             /// <param name="width">
-            ///     The width.
+            /// The width.
             /// </param>
             /// <param name="zDeep">
-            ///     The z deep.
+            /// The z deep.
             /// </param>
             public static void DrawCircle(
                 Vector3 position, 
@@ -879,13 +877,13 @@ namespace Better_Nerf_Irelia
             #region Methods
 
             /// <summary>
-            ///     The dispose.
+            /// The dispose.
             /// </summary>
             /// <param name="sender">
-            ///     The sender.
+            /// The sender.
             /// </param>
             /// <param name="e">
-            ///     The e.
+            /// The e.
             /// </param>
             private static void Dispose(object sender, EventArgs e)
             {
@@ -906,10 +904,10 @@ namespace Better_Nerf_Irelia
             }
 
             /// <summary>
-            ///     The on post reset.
+            /// The on post reset.
             /// </summary>
             /// <param name="args">
-            ///     The args.
+            /// The args.
             /// </param>
             private static void OnPostReset(EventArgs args)
             {
@@ -920,10 +918,10 @@ namespace Better_Nerf_Irelia
             }
 
             /// <summary>
-            ///     The on pre reset.
+            /// The on pre reset.
             /// </summary>
             /// <param name="args">
-            ///     The args.
+            /// The args.
             /// </param>
             private static void OnPreReset(EventArgs args)
             {
@@ -958,19 +956,19 @@ namespace Better_Nerf_Irelia
             #region Constructors and Destructors
 
             /// <summary>
-            ///     Initializes a new instance of the <see cref="Line" /> class.
+            /// Initializes a new instance of the <see cref="Line"/> class.
             /// </summary>
             /// <param name="start">
-            ///     The start.
+            /// The start.
             /// </param>
             /// <param name="end">
-            ///     The end.
+            /// The end.
             /// </param>
             /// <param name="width">
-            ///     The width.
+            /// The width.
             /// </param>
             /// <param name="color">
-            ///     The color.
+            /// The color.
             /// </param>
             public Line(Vector2 start, Vector2 end, int width, ColorBGRA color)
             {
@@ -997,10 +995,10 @@ namespace Better_Nerf_Irelia
             #region Public Properties
 
             /// <summary>
-            /// Gets or sets the color.
+            ///     Gets or sets the color.
             /// </summary>
             /// <value>
-            /// The color.
+            ///     The color.
             /// </value>
             public ColorBGRA Color { get; set; }
 
@@ -1101,10 +1099,10 @@ namespace Better_Nerf_Irelia
             #region Methods
 
             /// <summary>
-            ///     The game on on update.
+            /// The game on on update.
             /// </summary>
             /// <param name="args">
-            ///     The args.
+            /// The args.
             /// </param>
             private void GameOnOnUpdate(EventArgs args)
             {
@@ -1139,22 +1137,22 @@ namespace Better_Nerf_Irelia
             #region Constructors and Destructors
 
             /// <summary>
-            ///     Initializes a new instance of the <see cref="Rectangle" /> class.
+            /// Initializes a new instance of the <see cref="Rectangle"/> class.
             /// </summary>
             /// <param name="x">
-            ///     The x.
+            /// The x.
             /// </param>
             /// <param name="y">
-            ///     The y.
+            /// The y.
             /// </param>
             /// <param name="width">
-            ///     The width.
+            /// The width.
             /// </param>
             /// <param name="height">
-            ///     The height.
+            /// The height.
             /// </param>
             /// <param name="color">
-            ///     The color.
+            /// The color.
             /// </param>
             public Rectangle(int x, int y, int width, int height, ColorBGRA color)
             {
@@ -1182,10 +1180,10 @@ namespace Better_Nerf_Irelia
             #region Public Properties
 
             /// <summary>
-            /// Gets or sets the color.
+            ///     Gets or sets the color.
             /// </summary>
             /// <value>
-            /// The color.
+            ///     The color.
             /// </value>
             public ColorBGRA Color { get; set; }
 
@@ -1280,10 +1278,10 @@ namespace Better_Nerf_Irelia
             #region Methods
 
             /// <summary>
-            ///     The game_ on update.
+            /// The game_ on update.
             /// </summary>
             /// <param name="args">
-            ///     The args.
+            /// The args.
             /// </param>
             private void Game_OnUpdate(EventArgs args)
             {
@@ -1306,22 +1304,6 @@ namespace Better_Nerf_Irelia
             #region Fields
 
             /// <summary>
-            /// Gets or sets the layer.
-            /// </summary>
-            /// <value>
-            /// The layer.
-            /// </value>
-            public float Layer { get; set; }
-
-            /// <summary>
-            /// Gets or sets the visible condition.
-            /// </summary>
-            /// <value>
-            /// The visible condition.
-            /// </value>
-            public VisibleConditionDelegate VisibleCondition { get; set; }
-
-            /// <summary>
             ///     The _visible.
             /// </summary>
             private bool visible = true;
@@ -1331,7 +1313,7 @@ namespace Better_Nerf_Irelia
             #region Delegates
 
             /// <summary>
-            /// The visible condition delegate.
+            ///     The visible condition delegate.
             /// </summary>
             /// <param name="sender">The sender.</param>
             /// <returns>If the object is visible.</returns>
@@ -1340,6 +1322,14 @@ namespace Better_Nerf_Irelia
             #endregion
 
             #region Public Properties
+
+            /// <summary>
+            ///     Gets or sets the layer.
+            /// </summary>
+            /// <value>
+            ///     The layer.
+            /// </value>
+            public float Layer { get; set; }
 
             /// <summary>
             ///     Gets or sets a value indicating whether visible.
@@ -1356,6 +1346,14 @@ namespace Better_Nerf_Irelia
                     this.visible = value;
                 }
             }
+
+            /// <summary>
+            ///     Gets or sets the visible condition.
+            /// </summary>
+            /// <value>
+            ///     The visible condition.
+            /// </value>
+            public VisibleConditionDelegate VisibleCondition { get; set; }
 
             #endregion
 
@@ -1447,13 +1445,13 @@ namespace Better_Nerf_Irelia
             #region Constructors and Destructors
 
             /// <summary>
-            ///     Initializes a new instance of the <see cref="Sprite" /> class.
+            /// Initializes a new instance of the <see cref="Sprite"/> class.
             /// </summary>
             /// <param name="bitmap">
-            ///     The bitmap.
+            /// The bitmap.
             /// </param>
             /// <param name="position">
-            ///     The position.
+            /// The position.
             /// </param>
             public Sprite(Bitmap bitmap, Vector2 position)
                 : this()
@@ -1462,13 +1460,13 @@ namespace Better_Nerf_Irelia
             }
 
             /// <summary>
-            ///     Initializes a new instance of the <see cref="Sprite" /> class.
+            /// Initializes a new instance of the <see cref="Sprite"/> class.
             /// </summary>
             /// <param name="texture">
-            ///     The texture.
+            /// The texture.
             /// </param>
             /// <param name="position">
-            ///     The position.
+            /// The position.
             /// </param>
             public Sprite(BaseTexture texture, Vector2 position)
                 : this()
@@ -1479,13 +1477,13 @@ namespace Better_Nerf_Irelia
             }
 
             /// <summary>
-            ///     Initializes a new instance of the <see cref="Sprite" /> class.
+            /// Initializes a new instance of the <see cref="Sprite"/> class.
             /// </summary>
             /// <param name="stream">
-            ///     The stream.
+            /// The stream.
             /// </param>
             /// <param name="position">
-            ///     The position.
+            /// The position.
             /// </param>
             public Sprite(Stream stream, Vector2 position)
                 : this()
@@ -1494,13 +1492,13 @@ namespace Better_Nerf_Irelia
             }
 
             /// <summary>
-            ///     Initializes a new instance of the <see cref="Sprite" /> class.
+            /// Initializes a new instance of the <see cref="Sprite"/> class.
             /// </summary>
             /// <param name="bytesArray">
-            ///     The bytes array.
+            /// The bytes array.
             /// </param>
             /// <param name="position">
-            ///     The position.
+            /// The position.
             /// </param>
             public Sprite(byte[] bytesArray, Vector2 position)
                 : this()
@@ -1509,13 +1507,13 @@ namespace Better_Nerf_Irelia
             }
 
             /// <summary>
-            ///     Initializes a new instance of the <see cref="Sprite" /> class.
+            /// Initializes a new instance of the <see cref="Sprite"/> class.
             /// </summary>
             /// <param name="fileLocation">
-            ///     The file location.
+            /// The file location.
             /// </param>
             /// <param name="position">
-            ///     The position.
+            /// The position.
             /// </param>
             public Sprite(string fileLocation, Vector2 position)
                 : this()
@@ -1549,7 +1547,7 @@ namespace Better_Nerf_Irelia
             public delegate void OnResetting(Sprite sprite);
 
             /// <summary>
-            /// The position delegate.
+            ///     The position delegate.
             /// </summary>
             /// <returns>The position.</returns>
             public delegate Vector2 PositionDelegate();
@@ -1665,22 +1663,22 @@ namespace Better_Nerf_Irelia
             }
 
             /// <summary>
-            ///     The crop.
+            /// The crop.
             /// </summary>
             /// <param name="x">
-            ///     The x.
+            /// The x.
             /// </param>
             /// <param name="y">
-            ///     The y.
+            /// The y.
             /// </param>
             /// <param name="w">
-            ///     The w.
+            /// The w.
             /// </param>
             /// <param name="h">
-            ///     The h.
+            /// The h.
             /// </param>
             /// <param name="scale">
-            ///     The scale.
+            /// The scale.
             /// </param>
             public void Crop(int x, int y, int w, int h, bool scale = false)
             {
@@ -1697,13 +1695,13 @@ namespace Better_Nerf_Irelia
             }
 
             /// <summary>
-            ///     The crop.
+            /// The crop.
             /// </summary>
             /// <param name="rect">
-            ///     The rectangle.
+            /// The rectangle.
             /// </param>
             /// <param name="scale">
-            ///     The scale.
+            /// The scale.
             /// </param>
             public void Crop(SharpDX.Rectangle rect, bool scale = false)
             {
@@ -1824,10 +1822,10 @@ namespace Better_Nerf_Irelia
             }
 
             /// <summary>
-            ///     The set saturation.
+            /// The set saturation.
             /// </summary>
             /// <param name="saturation">
-            ///     The saturation.
+            /// The saturation.
             /// </param>
             public void SetSaturation(float saturation)
             {
@@ -1843,13 +1841,13 @@ namespace Better_Nerf_Irelia
             }
 
             /// <summary>
-            ///     The update texture bitmap.
+            /// The update texture bitmap.
             /// </summary>
             /// <param name="newBitmap">
-            ///     The new bitmap.
+            /// The new bitmap.
             /// </param>
             /// <param name="position">
-            ///     The position.
+            /// The position.
             /// </param>
             public void UpdateTextureBitmap(Bitmap newBitmap, Vector2 position = new Vector2())
             {
@@ -1889,16 +1887,16 @@ namespace Better_Nerf_Irelia
             #region Methods
 
             /// <summary>
-            ///     The saturate bitmap.
+            /// The saturate bitmap.
             /// </summary>
             /// <param name="original">
-            ///     The original.
+            /// The original.
             /// </param>
             /// <param name="saturation">
-            ///     The saturation.
+            /// The saturation.
             /// </param>
             /// <returns>
-            ///     The <see cref="Bitmap" />.
+            /// The <see cref="Bitmap"/>.
             /// </returns>
             private static Bitmap SaturateBitmap(Image original, float saturation)
             {
@@ -1954,10 +1952,10 @@ namespace Better_Nerf_Irelia
             }
 
             /// <summary>
-            ///     The game_ on update.
+            /// The game_ on update.
             /// </summary>
             /// <param name="args">
-            ///     The args.
+            /// The args.
             /// </param>
             private void Game_OnUpdate(EventArgs args)
             {
@@ -1982,51 +1980,23 @@ namespace Better_Nerf_Irelia
             /// <summary>
             ///     The centered.
             /// </summary>
-            [SuppressMessage("StyleCop.CSharp.MaintainabilityRules", "SA1401:FieldsMustBePrivate", Justification = "Reviewed. Suppression is OK here.")]
+            [SuppressMessage("StyleCop.CSharp.MaintainabilityRules", "SA1401:FieldsMustBePrivate", 
+                Justification = "Reviewed. Suppression is OK here.")]
             public bool Centered = false;
-
-            /// <summary>
-            /// Gets or sets the offset.
-            /// </summary>
-            /// <value>
-            /// The offset.
-            /// </value>
-            public Vector2 Offset { get; set; }
 
             /// <summary>
             ///     The out lined.
             /// </summary>
-            [SuppressMessage("StyleCop.CSharp.MaintainabilityRules", "SA1401:FieldsMustBePrivate", Justification = "Reviewed. Suppression is OK here.")]
+            [SuppressMessage("StyleCop.CSharp.MaintainabilityRules", "SA1401:FieldsMustBePrivate", 
+                Justification = "Reviewed. Suppression is OK here.")]
             public bool OutLined = false;
 
             /// <summary>
-            /// Gets or sets the position update.
+            ///     The _text.
             /// </summary>
-            /// <value>
-            /// The position update.
-            /// </value>
-            public PositionDelegate PositionUpdate { get; set; }
+            [SuppressMessage("StyleCop.CSharp.NamingRules", "SA1309:FieldNamesMustNotBeginWithUnderscore", 
+                Justification = "Reviewed. Suppression is OK here.")]
 
-            /// <summary>
-            /// Gets or sets the text update.
-            /// </summary>
-            /// <value>
-            /// The text update.
-            /// </value>
-            public TextDelegate TextUpdate { get; set; }
-
-            /// <summary>
-            /// Gets or sets the unit.
-            /// </summary>
-            /// <value>
-            /// The unit.
-            /// </value>
-            public Obj_AI_Base Unit { get; set; }
-
-            /// <summary>
-            /// The _text.
-            /// </summary>
-            [SuppressMessage("StyleCop.CSharp.NamingRules", "SA1309:FieldNamesMustNotBeginWithUnderscore", Justification = "Reviewed. Suppression is OK here.")]
             // ReSharper disable once InconsistentNaming
             private string _text;
 
@@ -2060,25 +2030,25 @@ namespace Better_Nerf_Irelia
             #region Constructors and Destructors
 
             /// <summary>
-            ///     Initializes a new instance of the <see cref="Render.Text" /> class.
+            /// Initializes a new instance of the <see cref="Render.Text"/> class.
             /// </summary>
             /// <param name="text">
-            ///     The text.
+            /// The text.
             /// </param>
             /// <param name="x">
-            ///     The x.
+            /// The x.
             /// </param>
             /// <param name="y">
-            ///     The y.
+            /// The y.
             /// </param>
             /// <param name="size">
-            ///     The size.
+            /// The size.
             /// </param>
             /// <param name="color">
-            ///     The color.
+            /// The color.
             /// </param>
             /// <param name="fontName">
-            ///     The font name.
+            /// The font name.
             /// </param>
             public Text(string text, int x, int y, int size, ColorBGRA color, string fontName = "Calibri")
                 : this(text, fontName, size, color)
@@ -2088,22 +2058,22 @@ namespace Better_Nerf_Irelia
             }
 
             /// <summary>
-            ///     Initializes a new instance of the <see cref="Render.Text" /> class.
+            /// Initializes a new instance of the <see cref="Render.Text"/> class.
             /// </summary>
             /// <param name="text">
-            ///     The text.
+            /// The text.
             /// </param>
             /// <param name="position">
-            ///     The position.
+            /// The position.
             /// </param>
             /// <param name="size">
-            ///     The size.
+            /// The size.
             /// </param>
             /// <param name="color">
-            ///     The color.
+            /// The color.
             /// </param>
             /// <param name="fontName">
-            ///     The font name.
+            /// The font name.
             /// </param>
             public Text(string text, Vector2 position, int size, ColorBGRA color, string fontName = "Calibri")
                 : this(text, fontName, size, color)
@@ -2113,25 +2083,25 @@ namespace Better_Nerf_Irelia
             }
 
             /// <summary>
-            ///     Initializes a new instance of the <see cref="Render.Text" /> class.
+            /// Initializes a new instance of the <see cref="Render.Text"/> class.
             /// </summary>
             /// <param name="text">
-            ///     The text.
+            /// The text.
             /// </param>
             /// <param name="unit">
-            ///     The unit.
+            /// The unit.
             /// </param>
             /// <param name="offset">
-            ///     The offset.
+            /// The offset.
             /// </param>
             /// <param name="size">
-            ///     The size.
+            /// The size.
             /// </param>
             /// <param name="color">
-            ///     The color.
+            /// The color.
             /// </param>
             /// <param name="fontName">
-            ///     The font name.
+            /// The font name.
             /// </param>
             public Text(
                 string text, 
@@ -2152,25 +2122,25 @@ namespace Better_Nerf_Irelia
             }
 
             /// <summary>
-            ///     Initializes a new instance of the <see cref="Render.Text" /> class.
+            /// Initializes a new instance of the <see cref="Render.Text"/> class.
             /// </summary>
             /// <param name="x">
-            ///     The x.
+            /// The x.
             /// </param>
             /// <param name="y">
-            ///     The y.
+            /// The y.
             /// </param>
             /// <param name="text">
-            ///     The text.
+            /// The text.
             /// </param>
             /// <param name="size">
-            ///     The size.
+            /// The size.
             /// </param>
             /// <param name="color">
-            ///     The color.
+            /// The color.
             /// </param>
             /// <param name="fontName">
-            ///     The font name.
+            /// The font name.
             /// </param>
             public Text(int x, int y, string text, int size, ColorBGRA color, string fontName = "Calibri")
                 : this(text, fontName, size, color)
@@ -2180,22 +2150,22 @@ namespace Better_Nerf_Irelia
             }
 
             /// <summary>
-            ///     Initializes a new instance of the <see cref="Render.Text" /> class.
+            /// Initializes a new instance of the <see cref="Render.Text"/> class.
             /// </summary>
             /// <param name="position">
-            ///     The position.
+            /// The position.
             /// </param>
             /// <param name="text">
-            ///     The text.
+            /// The text.
             /// </param>
             /// <param name="size">
-            ///     The size.
+            /// The size.
             /// </param>
             /// <param name="color">
-            ///     The color.
+            /// The color.
             /// </param>
             /// <param name="fontName">
-            ///     The font name.
+            /// The font name.
             /// </param>
             public Text(Vector2 position, string text, int size, ColorBGRA color, string fontName = "Calibri")
                 : this(text, fontName, size, color)
@@ -2205,19 +2175,19 @@ namespace Better_Nerf_Irelia
             }
 
             /// <summary>
-            ///     Initializes a new instance of the <see cref="Render.Text" /> class.
+            /// Initializes a new instance of the <see cref="Render.Text"/> class.
             /// </summary>
             /// <param name="text">
-            ///     The text.
+            /// The text.
             /// </param>
             /// <param name="fontName">
-            ///     The font name.
+            /// The font name.
             /// </param>
             /// <param name="size">
-            ///     The size.
+            /// The size.
             /// </param>
             /// <param name="color">
-            ///     The color.
+            /// The color.
             /// </param>
             private Text(string text, string fontName, int size, ColorBGRA color)
             {
@@ -2238,13 +2208,13 @@ namespace Better_Nerf_Irelia
             #region Delegates
 
             /// <summary>
-            /// The position delegate.
+            ///     The position delegate.
             /// </summary>
             /// <returns>The position.</returns>
             public delegate Vector2 PositionDelegate();
 
             /// <summary>
-            /// The text delegate.
+            ///     The text delegate.
             /// </summary>
             /// <returns>The text.</returns>
             public delegate string TextDelegate();
@@ -2264,9 +2234,27 @@ namespace Better_Nerf_Irelia
             public int Height { get; private set; }
 
             /// <summary>
+            ///     Gets or sets the offset.
+            /// </summary>
+            /// <value>
+            ///     The offset.
+            /// </value>
+            public Vector2 Offset { get; set; }
+
+            /// <summary>
+            ///     Gets or sets the position update.
+            /// </summary>
+            /// <value>
+            ///     The position update.
+            /// </value>
+            public PositionDelegate PositionUpdate { get; set; }
+
+            /// <summary>
             ///     Gets or sets the text.
             /// </summary>
-            [SuppressMessage("StyleCop.CSharp.NamingRules", "SA1300:ElementMustBeginWithUpperCaseLetter", Justification = "Reviewed. Suppression is OK here.")]
+            [SuppressMessage("StyleCop.CSharp.NamingRules", "SA1300:ElementMustBeginWithUpperCaseLetter", 
+                Justification = "Reviewed. Suppression is OK here.")]
+
             // ReSharper disable once InconsistentNaming
             public string text
             {
@@ -2306,6 +2294,22 @@ namespace Better_Nerf_Irelia
                     this.textFont = new Font(Device, value);
                 }
             }
+
+            /// <summary>
+            ///     Gets or sets the text update.
+            /// </summary>
+            /// <value>
+            ///     The text update.
+            /// </value>
+            public TextDelegate TextUpdate { get; set; }
+
+            /// <summary>
+            ///     Gets or sets the unit.
+            /// </summary>
+            /// <value>
+            ///     The unit.
+            /// </value>
+            public Obj_AI_Base Unit { get; set; }
 
             /// <summary>
             ///     Gets the width.
@@ -2455,10 +2459,10 @@ namespace Better_Nerf_Irelia
             #region Methods
 
             /// <summary>
-            ///     The game_ on update.
+            /// The game_ on update.
             /// </summary>
             /// <param name="args">
-            ///     The args.
+            /// The args.
             /// </param>
             private void Game_OnUpdate(EventArgs args)
             {
@@ -2500,19 +2504,19 @@ namespace Better_Nerf_Irelia
         #region Public Methods and Operators
 
         /// <summary>
-        ///     The measure text.
+        /// The measure text.
         /// </summary>
         /// <param name="font">
-        ///     The font.
+        /// The font.
         /// </param>
         /// <param name="sprite">
-        ///     The sprite.
+        /// The sprite.
         /// </param>
         /// <param name="text">
-        ///     The text.
+        /// The text.
         /// </param>
         /// <returns>
-        ///     The <see cref="Rectangle" />.
+        /// The <see cref="Rectangle"/>.
         /// </returns>
         public static Rectangle MeasureText(this Font font, Sprite sprite, string text)
         {
@@ -2535,16 +2539,16 @@ namespace Better_Nerf_Irelia
         }
 
         /// <summary>
-        ///     The measure text.
+        /// The measure text.
         /// </summary>
         /// <param name="font">
-        ///     The font.
+        /// The font.
         /// </param>
         /// <param name="text">
-        ///     The text.
+        /// The text.
         /// </param>
         /// <returns>
-        ///     The <see cref="Rectangle" />.
+        /// The <see cref="Rectangle"/>.
         /// </returns>
         public static Rectangle MeasureText(this Font font, string text)
         {
